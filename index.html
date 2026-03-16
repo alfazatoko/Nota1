@@ -3,30 +3,43 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nota Penjualan</title>
 
 <link rel="stylesheet" href="style.css">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
-<h2 id="toko">TOKO ANDA</h2>
-
-<div class="info">
+<div class="header">
+<h2>Nota Penjualan</h2>
 <div id="tanggal"></div>
-<div>No : <span id="trx"></span></div>
+<div>No: <span id="trx"></span></div>
 </div>
 
+<div class="card">
+
 <input id="barang" placeholder="Nama barang">
+
+<div class="row">
+
 <input id="harga" type="number" placeholder="Harga">
+
 <input id="qty" type="number" placeholder="Qty">
 
-<button onclick="tambah()">Tambah</button>
+</div>
+
+<button class="btnTambah" onclick="tambah()">Tambah Barang</button>
+
+</div>
+
+<div class="card">
 
 <table id="tabel">
 
@@ -41,20 +54,30 @@
 </table>
 
 <div class="total">
+
 Total : Rp <span id="total">0</span>
+
+</div>
+
 </div>
 
 <div class="menu">
 
-<button onclick="printNota()">Print</button>
-<button onclick="shareNota()">Share</button>
-<button onclick="simpan()">Simpan</button>
+<button class="btnPrint" onclick="printNota()">Print</button>
+
+<button class="btnShare" onclick="sharePDF()">Share PDF</button>
+
+<button class="btnSave" onclick="simpan()">Simpan</button>
 
 </div>
+
+<div class="riwayat">
 
 <h3>Riwayat</h3>
 
 <div id="riwayat"></div>
+
+</div>
 
 </div>
 

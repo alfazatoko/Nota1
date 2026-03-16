@@ -1,52 +1,97 @@
 body{
 font-family:Arial;
-background:#f2f2f2;
+background:#eef2f7;
 margin:0;
 padding:10px;
 }
 
-.container{
-background:white;
-padding:15px;
-border-radius:10px;
-max-width:500px;
+.app{
+max-width:420px;
 margin:auto;
 }
 
-h2{
+.header{
 text-align:center;
+color:white;
+background:linear-gradient(135deg,#3a7bfd,#00c6ff);
+padding:15px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.card{
+background:white;
+padding:12px;
+border-radius:10px;
+margin-bottom:10px;
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
 }
 
 input{
 width:100%;
 padding:8px;
-margin:4px 0;
+margin:5px 0;
+border-radius:6px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+.row{
+display:flex;
+gap:6px;
+}
+
+.row input{
+flex:1;
 }
 
 button{
-padding:8px;
-margin:4px;
+width:100%;
+padding:10px;
+margin-top:6px;
 border:none;
-background:#3498db;
+border-radius:8px;
 color:white;
-border-radius:6px;
+font-size:14px;
+}
+
+.btnTambah{
+background:#27ae60;
+}
+
+.btnPrint{
+background:#2980b9;
+}
+
+.btnShare{
+background:#8e44ad;
+}
+
+.btnSave{
+background:#e67e22;
 }
 
 table{
 width:100%;
 border-collapse:collapse;
-margin-top:10px;
+font-size:13px;
 }
 
-td,th{
-border-bottom:1px solid #ddd;
-padding:5px;
+th,td{
+border-bottom:1px solid #eee;
+padding:6px;
 text-align:center;
 }
 
 .total{
+text-align:right;
 font-size:18px;
 font-weight:bold;
-text-align:right;
-margin-top:10px;
+margin-top:8px;
+}
+
+.riwayat{
+background:white;
+padding:10px;
+border-radius:10px;
 }

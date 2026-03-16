@@ -35,8 +35,7 @@ document.getElementById("total").innerText=total
 
 function hapus(btn){
 
-let row=btn.parentNode.parentNode
-row.remove()
+btn.parentNode.parentNode.remove()
 
 }
 
@@ -46,27 +45,19 @@ window.print()
 
 }
 
-function shareNota(){
+function sharePDF(){
 
-let text=
-"Nota Penjualan\n"+
-"No : "+document.getElementById("trx").innerText+"\n"+
-"Total : Rp "+total
+const { jsPDF } = window.jspdf
 
-if(navigator.share){
+let doc=new jsPDF()
 
-navigator.share({
-title:"Nota",
-text:text
-})
+doc.text("NOTA PENJUALAN",20,20)
 
-}else{
+doc.text("No: "+document.getElementById("trx").innerText,20,30)
 
-window.open(
-"https://wa.me/?text="+encodeURIComponent(text)
-)
+doc.text("Total: Rp "+total,20,40)
 
-}
+doc.save("nota.pdf")
 
 }
 
